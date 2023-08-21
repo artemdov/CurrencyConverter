@@ -1,7 +1,7 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
-import {CurrencyConverter} from "./CurrencyConverter/CurrencyConverter";
-import {CurrencyRates} from "./CurrencyRates/CurrencyRates";
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { CurrencyConverter } from './CurrencyConverter/CurrencyConverter';
+import { CurrencyRates } from './CurrencyRates/CurrencyRates';
 
 const App = () => {
     const currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD'];

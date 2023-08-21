@@ -1,7 +1,7 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react';
 import '../App.css';
 
-export const CurrencyRates = ({currencies}) => {
+export const CurrencyRates = ({ currencies }) => {
     const [selectedCurrency, setSelectedCurrency] = useState('');
     const [rates, setRates] = useState({});
 

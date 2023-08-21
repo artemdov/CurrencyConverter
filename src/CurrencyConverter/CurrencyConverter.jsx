@@ -42,7 +42,7 @@ export const CurrencyConverter = ({ currencies }) => {
             <h2>Currency Converter</h2>
             <div className="input-container">
                 <label>Amount:</label>
-                <input type="number" value={amount} onChange={handleAmountChange} />
+                <input type="number" value={amount} onChange={handleAmountChange}/>
             </div>
             <div className="input-container">
                 <label>From:</label>
