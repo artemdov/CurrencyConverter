@@ -1,1 +1,1 @@
-export const currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD'];
+export const currencies = ['USD', 'EUR', 'GBP', 'RUB', 'BYN', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD'];

@@ -26,11 +26,7 @@ export const CurrencyConverterComponent = (props) => {
                 <label>From:</label>
                 <select value={fromCurrency} onChange={handleFromCurrencyChange}>
                     <option value="">Select currency</option>
-                    {currencies.map((currency) => (
-                        <option key={currency} value={currency}>
-                            {currency}
-                        </option>
-                    ))}
+                    {getCurrencies(currencies)}
                 </select>
             </div>
             <div className={styles.inputContainer}>
