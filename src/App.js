@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { CurrencyConverter } from './CurrencyConverter/CurrencyConverter';
-import { CurrencyRates } from './CurrencyRates/CurrencyRates';
+import { CurrencyConverter } from './CurrencyConverter';
+import { CurrencyRates } from './CurrencyRates';
 
 const App = () => {
-    const currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD'];
 
     return (
         <Router>
@@ -21,8 +20,8 @@ const App = () => {
                 </nav>
 
                 <Routes>
-                    <Route path="/" element={<CurrencyConverter currencies={currencies}/>}/>
-                    <Route path="/rates" element={<CurrencyRates currencies={currencies}/>}/>
+                    <Route path="/" element={<CurrencyConverter />}/>
+                    <Route path="/rates" element={<CurrencyRates />}/>
                 </Routes>
             </div>
         </Router>
