@@ -8,7 +8,7 @@ export const CurrencyRatesComponent = (props) => {
 
     return (
         <div className={styles.ratesContainer}>
-            <h2>Currency Rates</h2>
+            <h2 className={styles.header}>Currency Rates</h2>
             <div className={styles.inputContainer}>
                 <label>Select Currency:</label>
                 <select value={selectedCurrency} onChange={handleCurrencyChange}>
@@ -18,10 +18,14 @@ export const CurrencyRatesComponent = (props) => {
             </div>
             {selectedCurrency && (<div className={styles.ratesList}>
                     <h3>Rates relative to {selectedCurrency}</h3>
-                    <ul>
-                        {Object.entries(rates).map(([currency, rate]) => (<li key={currency}>
-                            {currency}: {rate}
-                        </li>))}
+                    <ul className={styles.rates}>
+                        {Object.entries(rates)
+                            .filter(([currency, rate]) => currencies.includes(currency))
+                            .map(([currency, rate]) => (
+                                <li key={currency}>
+                                    {currency}: {rate}
+                                </li>
+                            ))}
                     </ul>
                 </div>
             )}

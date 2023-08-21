@@ -1,6 +1,13 @@
 .ratesContainer {
+  align-items: center;
+  background: cadetblue;
+  border-radius: 20px;
   border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
   padding: 20px;
+  width: 800px;
+  flex-direction: column;
 }
 
 .inputContainer {
@@ -9,4 +16,19 @@
 
 .ratesList {
   margin-top: 10px;
+}
+
+.header {
+  font-family: 'Pacifico', cursive;
+  font-size: 35px;
+  text-align: center;
+}
+
+.rates {
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 30px;
+  padding-block: 10px;
 }
