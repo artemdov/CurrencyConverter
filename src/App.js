@@ -2,14 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { CurrencyConverter } from './CurrencyConverter';
 import { CurrencyRates } from './CurrencyRates';
+import './App.css';
 
 const App = () => {
 
     return (
         <Router>
-            <div>
+            <div className={'App'}>
                 <nav>
-                    <ul>
+                    <ul className={'List'}>
                         <li>
                             <Link to="/">Конвертер</Link>
                         </li>
@@ -18,10 +19,9 @@ const App = () => {
                         </li>
                     </ul>
                 </nav>
-
                 <Routes>
-                    <Route path="/" element={<CurrencyConverter />}/>
-                    <Route path="/rates" element={<CurrencyRates />}/>
+                    <Route path="/" element={<CurrencyConverter/>}/>
+                    <Route path="/rates" element={<CurrencyRates/>}/>
                 </Routes>
             </div>
         </Router>
