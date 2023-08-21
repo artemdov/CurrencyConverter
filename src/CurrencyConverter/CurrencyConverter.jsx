@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../App.css';
 
 export const CurrencyConverter = ({ currencies }) => {
     const [amount, setAmount] = useState(0);
@@ -37,13 +38,13 @@ export const CurrencyConverter = ({ currencies }) => {
     }, [amount, fromCurrency, toCurrency]);
 
     return (
-        <div>
+        <div className="converter-container">
             <h2>Currency Converter</h2>
-            <div>
+            <div className="input-container">
                 <label>Amount:</label>
                 <input type="number" value={amount} onChange={handleAmountChange} />
             </div>
-            <div>
+            <div className="input-container">
                 <label>From:</label>
                 <select value={fromCurrency} onChange={handleFromCurrencyChange}>
                     <option value="">Select currency</option>
@@ -54,7 +55,7 @@ export const CurrencyConverter = ({ currencies }) => {
                     ))}
                 </select>
             </div>
-            <div>
+            <div className="input-container">
                 <label>To:</label>
                 <select value={toCurrency} onChange={handleToCurrencyChange}>
                     <option value="">Select currency</option>
@@ -65,11 +66,10 @@ export const CurrencyConverter = ({ currencies }) => {
                     ))}
                 </select>
             </div>
-            <div>
+            <div className="result-container">
                 <label>Converted Amount:</label>
                 <span>{convertedAmount}</span>
             </div>
         </div>
     );
 };
-

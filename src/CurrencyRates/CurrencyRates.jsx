@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import '../App.css';
 
 export const CurrencyRates = ({currencies}) => {
     const [selectedCurrency, setSelectedCurrency] = useState('');
@@ -23,9 +24,9 @@ export const CurrencyRates = ({currencies}) => {
     }, [selectedCurrency]);
 
     return (
-        <div>
+        <div className="rates-container">
             <h2>Currency Rates</h2>
-            <div>
+            <div className="input-container">
                 <label>Select Currency:</label>
                 <select value={selectedCurrency} onChange={handleCurrencyChange}>
                     <option value="">Select currency</option>
@@ -37,7 +38,7 @@ export const CurrencyRates = ({currencies}) => {
                 </select>
             </div>
             {selectedCurrency && (
-                <div>
+                <div className="rates-list">
                     <h3>Rates relative to {selectedCurrency}</h3>
                     <ul>
                         {Object.entries(rates).map(([currency, rate]) => (
