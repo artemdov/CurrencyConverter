@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../App.css';
+import styles from '../CurrencyRates/styles.module.scss';
 
 export const CurrencyRates = ({ currencies }) => {
     const [selectedCurrency, setSelectedCurrency] = useState('');
@@ -23,32 +23,24 @@ export const CurrencyRates = ({ currencies }) => {
         }
     }, [selectedCurrency]);
 
-    return (
-        <div className="rates-container">
-            <h2>Currency Rates</h2>
-            <div className="input-container">
-                <label>Select Currency:</label>
-                <select value={selectedCurrency} onChange={handleCurrencyChange}>
-                    <option value="">Select currency</option>
-                    {currencies.map((currency) => (
-                        <option key={currency} value={currency}>
-                            {currency}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            {selectedCurrency && (
-                <div className="rates-list">
-                    <h3>Rates relative to {selectedCurrency}</h3>
-                    <ul>
-                        {Object.entries(rates).map(([currency, rate]) => (
-                            <li key={currency}>
-                                {currency}: {rate}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
+    return (<div className={styles.ratesContainer}>
+        <h2>Currency Rates</h2>
+        <div className={styles.inputContainer}>
+            <label>Select Currency:</label>
+            <select value={selectedCurrency} onChange={handleCurrencyChange}>
+                <option value="">Select currency</option>
+                {currencies.map((currency) => (<option key={currency} value={currency}>
+                    {currency}
+                </option>))}
+            </select>
         </div>
-    );
+        {selectedCurrency && (<div className={styles.ratesList}>
+            <h3>Rates relative to {selectedCurrency}</h3>
+            <ul>
+                {Object.entries(rates).map(([currency, rate]) => (<li key={currency}>
+                    {currency}: {rate}
+                </li>))}
+            </ul>
+        </div>)}
+    </div>);
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css';
+import styles from '../CurrencyConverter/styles.module.scss';
 
 export const CurrencyConverter = ({ currencies }) => {
     const [amount, setAmount] = useState(0);
@@ -38,13 +38,13 @@ export const CurrencyConverter = ({ currencies }) => {
     }, [amount, fromCurrency, toCurrency]);
 
     return (
-        <div className="converter-container">
+        <div className={styles.converterContainer}>
             <h2>Currency Converter</h2>
-            <div className="input-container">
+            <div className={styles.inputContainer}>
                 <label>Amount:</label>
                 <input type="number" value={amount} onChange={handleAmountChange}/>
             </div>
-            <div className="input-container">
+            <div className={styles.inputContainer}>
                 <label>From:</label>
                 <select value={fromCurrency} onChange={handleFromCurrencyChange}>
                     <option value="">Select currency</option>
@@ -55,7 +55,7 @@ export const CurrencyConverter = ({ currencies }) => {
                     ))}
                 </select>
             </div>
-            <div className="input-container">
+            <div className={styles.inputContainer}>
                 <label>To:</label>
                 <select value={toCurrency} onChange={handleToCurrencyChange}>
                     <option value="">Select currency</option>
@@ -66,7 +66,7 @@ export const CurrencyConverter = ({ currencies }) => {
                     ))}
                 </select>
             </div>
-            <div className="result-container">
+            <div className={styles.resultContainer}>
                 <label>Converted Amount:</label>
                 <span>{convertedAmount}</span>
             </div>
