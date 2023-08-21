@@ -1,6 +1,5 @@
 .converterContainer {
   align-items: center;
-  background: aquamarine;
   border-radius: 20px;
   border: 1px solid #ccc;
   justify-content: center;
@@ -11,6 +10,7 @@
 .container {
   align-items: center;
   background: cadetblue;
+  border-radius: 20px;
   display: flex;
   height: 200px;
   justify-content: space-around;
@@ -19,6 +19,9 @@
 
 .inputContainer {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
 .resultContainer {
@@ -30,3 +33,17 @@
   font-size: 35px;
   text-align: center;
 }
+
+.label {
+  color: brown;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.lastLabel {
+  color: forestgreen;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+

@@ -20,18 +20,18 @@ export const CurrencyConverterComponent = (props) => {
             <h1 className={styles.header}>Currency Converter</h1>
             <div className={styles.container}>
                 <div className={styles.inputContainer}>
-                    <label>Amount:</label>
+                    <label className={styles.label}>Amount:</label>
                     <input type="number" value={amount} onChange={handleAmountChange}/>
                 </div>
                 <div className={styles.inputContainer}>
-                    <label>From:</label>
+                    <label className={styles.label}>From:</label>
                     <select value={fromCurrency} onChange={handleFromCurrencyChange}>
                         <option value="">Select currency</option>
                         {getCurrencies(currencies)}
                     </select>
                 </div>
                 <div className={styles.inputContainer}>
-                    <label>To:</label>
+                    <label className={styles.label}>To:</label>
                     <select value={toCurrency} onChange={handleToCurrencyChange}>
                         <option value="">Select currency</option>
                         {getCurrencies(currencies)}
@@ -39,8 +39,8 @@ export const CurrencyConverterComponent = (props) => {
                 </div>
             </div>
             <div className={styles.resultContainer}>
-                <label>Converted Amount:</label>
-                <span>{convertedAmount}</span>
+                <label className={styles.lastLabel}>Converted Amount:</label>
+                <span className={styles.lastLabel}>{convertedAmount}</span>
             </div>
         </div>
     );
