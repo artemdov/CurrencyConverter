@@ -4,12 +4,11 @@
   border-radius: 20px;
   border: 1px solid #ccc;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   padding: 20px;
   width: 800px;
-  flex-direction: column;
 }
-
 .converterContainer {
   align-items: center;
   border-radius: 20px;
@@ -28,7 +27,6 @@
 }
 
 .header {
-  font-family: 'Pacifico', cursive;
   font-size: 35px;
   text-align: center;
 }
