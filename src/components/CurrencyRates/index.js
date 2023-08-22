@@ -3,7 +3,6 @@ import { getUrl } from '../../functions/getUrl';
 import { API_URL } from '../../consts/url';
 import { CurrencyRatesComponent } from './CurrencyRatesComponent';
 
-
 export const CurrencyRates = (props) => {
     const { currencies } = props
     const [selectedCurrency, setSelectedCurrency] = useState('');
