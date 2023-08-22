@@ -7,6 +7,7 @@ export const CurrencyConverterComponent = (props) => {
 
     const {
         amount,
+        amountError,
         convertedAmount,
         fromCurrency,
         handleAmountChange,
@@ -18,9 +19,12 @@ export const CurrencyConverterComponent = (props) => {
     return (<div className={styles.converterContainer}>
         <h1 className={styles.header}>Конвертер валют</h1>
         <div className={styles.container}>
-            <div className={styles.inputContainer}>
-                <label className={styles.label}>Количество:</label>
-                <input type="number" value={amount} onChange={handleAmountChange}/>
+            <div>
+                <div className={styles.inputContainer}>
+                    <label className={styles.label}>Количество:</label>
+                    <input type="number" value={amount} onChange={handleAmountChange}/>
+                </div>
+                {amountError && <span className={styles.error}>{amountError}</span>}
             </div>
             <CurrencySelector
                 label="От:"
@@ -42,7 +46,7 @@ export const CurrencyConverterComponent = (props) => {
         </div>
         <div className={styles.resultContainer}>
             <label className={styles.lastLabel}>Сумма конвертации:</label>
-            <span className={styles.lastLabel}>{convertedAmount}</span>
+            <span className={styles.lastLabel}>{amountError ? amountError : convertedAmount}</span>
         </div>
     </div>);
 };

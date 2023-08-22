@@ -10,6 +10,15 @@
   flex-direction: column;
 }
 
+.converterContainer {
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
 .inputContainer {
   margin-bottom: 10px;
 }

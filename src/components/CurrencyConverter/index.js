@@ -10,10 +10,22 @@ export const CurrencyConverter = (props) => {
     const [fromCurrency, setFromCurrency] = useState('');
     const [toCurrency, setToCurrency] = useState('');
     const [convertedAmount, setConvertedAmount] = useState(0);
+    const [amountError, setAmountError] = useState('');
+
+    const validateAmount = (value) => {
+        const parsedValue = parseFloat(value);
+        if (isNaN(parsedValue) || parsedValue <= 0) {
+            setAmountError('Введите положительное число');
+        } else {
+            setAmountError('');
+        }
+    };
 
     const handleAmountChange = (e) => {
         const value = parseFloat(e.target.value);
         setAmount(value);
+
+        validateAmount(value);
     };
 
     const handleFromCurrencyChange = (e) => {
@@ -45,6 +57,7 @@ export const CurrencyConverter = (props) => {
     return CurrencyConverterComponent({
         ...props,
         amount,
+        amountError,
         convertedAmount,
         currencies,
         fromCurrency,
