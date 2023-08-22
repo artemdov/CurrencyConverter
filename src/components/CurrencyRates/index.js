@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getUrl } from '../functions/getUrl';
-import { API_URL } from '../consts/url';
+import { getUrl } from '../../functions/getUrl';
+import { API_URL } from '../../consts/url';
 import { CurrencyRatesComponent } from './CurrencyRatesComponent';
 
 

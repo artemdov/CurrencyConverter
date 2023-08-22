@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { CurrencyConverter } from './CurrencyConverter';
-import { CurrencyRates } from './CurrencyRates';
+import { CurrencyConverter } from './components/CurrencyConverter';
+import { CurrencyRates } from './components/CurrencyRates';
 import appStyles from './appStyles.module.css';
 
 const App = () => {

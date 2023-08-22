@@ -1,8 +1,7 @@
 import React from 'react';
-import styles from '../CurrencyConverter/styles.module.scss';
-import { currencies } from '../consts/currencies';
-import { getCurrencies } from '../functions/getCurrencies';
-import { CurrencySelector } from '../components/CurrencySelector';
+import styles from './styles.module.scss';
+import { currencies } from '../../consts/currencies';
+import { CurrencySelector } from '../CurrencySelector';
 
 export const CurrencyConverterComponent = (props) => {
 

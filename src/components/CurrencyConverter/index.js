@@ -1,7 +1,7 @@
 import { CurrencyConverterComponent } from './CurrencyConverterComponent';
 import { useEffect, useState } from 'react';
-import { getUrl } from '../functions/getUrl';
-import { API_URL } from '../consts/url';
+import { getUrl } from '../../functions/getUrl';
+import { API_URL } from '../../consts/url';
 
 
 export const CurrencyConverter = (props) => {

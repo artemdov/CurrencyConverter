@@ -1,6 +1,6 @@
-import styles from '../CurrencyRates/styles.module.scss';
-import { currencies } from '../consts/currencies';
-import { getCurrencies } from '../functions/getCurrencies';
+import styles from './styles.module.scss';
+import { currencies } from '../../consts/currencies';
+import { getCurrencies } from '../../functions/getCurrencies';
 
 export const CurrencyRatesComponent = (props) => {
 
